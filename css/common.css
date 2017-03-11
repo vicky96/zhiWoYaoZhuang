@@ -1,0 +1,10 @@
+body,p,img,ul,li,h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+a{text-decoration: none;color: black;}
+ul,li{list-style: none;}
+body{font-size: 12px;font-family: "微软雅黑";}
+input,a{outline: none;}
+header,nav,.main,footer,ul,.foot,.head{margin: 0 auto;}
+.clear{
+	clear: both;
+	overflow: hidden;
+}

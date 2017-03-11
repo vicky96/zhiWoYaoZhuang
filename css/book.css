@@ -1,0 +1,89 @@
+.box{
+	width: 95%;
+	margin:0 auto;
+}
+.title{
+	margin-top: 30px;
+}
+.bs-example{
+	width: 300px;
+	display: inline-block;
+	float: left;
+}
+.dropdown{
+	display: inline-block;
+	float: left;
+}
+thead th:first-child{
+	width: 70px;
+}
+thead th:nth-child(2){
+	width: 330px;
+	cursor: pointer;
+}
+thead th:nth-child(3){
+	width: 330px;
+	cursor: pointer;
+}
+thead th:nth-child(4){
+	width: 200px;
+	cursor: pointer;
+}
+.write{
+	margin-left: 50px;
+}
+.del{
+	width: 250px;
+	height: 100px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -125px;
+}
+.del p{
+	text-align: center;
+	display: block;
+	margin-bottom: 10px;
+}
+.del button{
+	margin:0 20px;
+}
+.revise{
+	width: 500px;
+	height: 350px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -250px;
+	background-color:none; 
+	z-index: 2;
+}
+.revise p{
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.reviseInput{
+	margin-top: 10px;
+}
+.revise-btn{
+	padding-left: 314px;
+	box-sizing: border-box;
+}
+.revise button{
+	margin-left: 10px;
+}
+.addBox{
+	position: relative;
+}
+.add{
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: -30px;
+	left: 650px;
+}
+.add-btn{
+	margin:10px 50px;
+}
