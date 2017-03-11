@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="header"></div>
+
+	<!-- logo、图标 -->
+	<div class="header2">
+		<div class="logo">
+			<a href="index.html"><img src="../images/common/logo.jpg"></a>
+			<img src="../images/common/logo2.jpg">
+		</div>
+	</div>
+
+	<!-- 主体 -->
+	<div class="main">
+		<img src="../images/login/background.jpg" class="back">
+		<form>
+			<ul>
+				<li class="one">登录<a href="register.html">免费注册</a></li>
+				<li>账号<i id="i1"></i><input type="text" id="userName" placeholder="请输入用户名/邮箱/手机号"></li>
+				<li>密码<input type="password" id="pwd" placeholder="请输入密码"></li>
+				<li>
+					<div class="box">
+						<input type="text" id="check" placeholder="请输入验证码">
+						<div class="changeBox"></div>
+						<button type="button" class="change">换一张</button><br/>
+					</div>
+					<div class="box2">
+						<i style="float:none;"></i>
+					</div>
+				</li>
+				<li><input id="auto" type="checkbox" checked>自动登录<a href="#">忘记密码？</a></li>
+				<li><button type="button" id="login">登 录</button></li>
+			</ul>
+		</form>
+		<ul class="bottom">
+			<li class="li_one">合作网站账号登录</li>
+			<li><a href="#">QQ</a></li>
+			<li><a href="#">支付宝</a></li>
+			<li><a href="#">新浪微博</a></li>
+			<li><a href="#" style="font-family:Arial;font-size: 14px">360</a></li>
+			<li><a href="#">百度</a></li>
+			<li><a href="#">人人</a></li>
+			<li><a href="#">迅雷</a></li>
+		</ul>
+	</div>
+
+	<!-- 尾部 -->
+	<div id="footer"></div>
+
+	<script src="../lib/tools.js"></script>
+	<script src="../js/login.js"></script>
+	<script src="../lib/jquery-1.12.3.js"></script>
+	<script src="../lib/template.js"></script>
+	<script src="../js/common/headerTpl.js"></script>
+	<script src="../js/common/footerTpl.js"></script>
+	<script>
+		var render1 = template.compile(tpl.header);
+		var headerHtml = render1({})
+		document.getElementById("header").innerHTML = headerHtml;
+
+		var render4 = template.compile(tpl.footer);
+		var footerHtml = render4({})
+		document.getElementById("footer").innerHTML = footerHtml;
+	</script>
+	<script src="../lib/jquery.cookie.js"></script>
+	<script src="../js/common/common.js"></script>
+</body>
+</html>

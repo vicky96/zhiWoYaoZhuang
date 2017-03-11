@@ -1,0 +1,172 @@
+/*logo*/
+.header2{
+	width: 100%;
+}
+.header2 .logo{
+	width:  1075px;
+	margin:0 auto;
+	height: 108px;
+}
+.header2 .logo a{
+	margin-left:40px;
+	float: left;
+}
+.header2 .logo img:last-child{
+	float: right;
+	margin-right: 66px;
+}
+
+/*主体*/
+.main{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.main .back{
+	margin-left: -280px;
+	height: 786px;
+}
+.main form{
+	height: 529px;
+	width:408px;
+	position:absolute;
+	top:126px; 
+	right:210px;
+	padding: 34px 42px 0;
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow: 0 0 26px #fcdfdf;
+}
+.main form ul li{
+	font-size:16px;
+}
+.main form ul li input[type=text]{
+	width:324px ;
+	height: 30px;
+	border: 1px solid #c4c4c4;
+	font-size:14px;
+	text-indent:1em;
+	font-family: "宋体";
+	margin-top:4px;
+}
+.main form ul li input[type=password]{
+	width:324px ;
+	height: 30px;
+	border: 1px solid #c4c4c4;
+	font-size:14px;
+	text-indent:1em;
+	font-family: "宋体";
+	margin-top:4px;
+}
+.main form ul .one{
+	font-size:22px;
+	margin-bottom: 35px;
+}
+.main form ul .one a{
+	font-size:16px;
+	color:#57d7ff;
+	float: right;
+	font-family: "微软雅黑";
+}
+.main form ul .one a span{
+	font-size: 12px;
+	color:#c4c4c4;
+	margin-top:12px;
+	display: inline-block;
+}
+.main form ul li i{
+	line-height: 24px;
+	display: inline-block;
+	height: 15px;
+	font-size:12px; 
+	color:#ff643c;
+	font-style: normal;
+}
+.main form ul li:nth-child(5) #check{
+	width: 175px;
+}
+.main form ul li:nth-child(5) .changeBox{
+	border: 1px solid #7697c7;
+	width:73px; 
+	height:18px;
+	display: inline-block;
+	margin-bottom: -5px;
+	background-color: #ebeced;
+}
+.main form ul li:nth-child(5) .change{
+	color:#57d7ff;
+	font-size:14px; 
+	border: none;
+	background: #fff;
+	cursor: pointer;
+}
+.main form ul li:last-child #agree{
+	background-color:#00c8ff;
+	color: white;
+	display: block;
+	width:326px; 
+	height:36px;
+	text-align: center;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+}
+.main form ul li .xieYi{
+	color:#00c8ff;
+	font-size:12px; 
+}
+.bottom{
+	width: 326px;
+	position: absolute;
+	bottom: 160px;
+	right: 250px;
+	padding-top: 16px;
+	box-sizing: border-box;
+	border-top: 1px dashed #e3e3e3;
+}
+.main .bottom .li_one{
+	font-size: 12px;
+	font-family: "宋体";
+	color: #6c6c6c;
+	width: 100%;
+	margin-bottom: 16px;
+	margin-left: 0;
+}
+.main form ul li a{
+	font-size: 14px;
+	font-family: "宋体";
+	color: #6c6c6c;
+}
+.main .bottom li{
+	float: left;
+	margin-left: 20px;
+}
+.main .bottom li a{
+	padding-left: 30px;
+	font-family: Arial;
+	line-height: 23px;
+}
+.main .bottom li:nth-child(2){
+	background: url("../images/common/other_autoico.png") 0 0 no-repeat;
+	margin-left: 0;
+}
+.main .bottom li:nth-child(3){
+	background: url("../images/common/other_autoico.png") 0 -30px no-repeat;
+}
+.main .bottom li:nth-child(4){
+	background: url("../images/common/other_autoico.png") 0 -60px no-repeat;
+}
+.main .bottom li:nth-child(5){
+	background: url("../images/common/other_autoico.png") 0 -90px no-repeat;
+}
+.main .bottom li:nth-child(6){
+	background: url("../images/common/other_autoico.png") 0 -120px no-repeat;
+	margin-left: 0;
+}
+.main .bottom li:nth-child(7){
+	background: url("../images/common/other_autoico.png") 0 -180px no-repeat;
+}
+.main .bottom li:nth-child(8){
+	background: url("../images/common/other_autoico.png") 0 -210px no-repeat;
+}

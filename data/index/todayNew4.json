@@ -1,0 +1,8 @@
+{
+	"g1":{"src":"../images/index/today1_1.jpg","discount":9.7,"name":"兰蔻眼部精华肌底液20ml，见证双眸更大、更清澈、更年轻。","price1":659,"price2":680.00},
+	"g2":{"src":"../images/index/today1_2.jpg","discount":4.4,"name":"倩碧经典三步曲礼包7件套，健康亮采挡不住、透出来！","price1":119,"price2":269.00},
+	"g3":{"src":"../images/index/today1_3.jpg","discount":3.3,"name":"可莱丝PEP乳清蛋白面膜10片，促进肌肤的弹力紧致。","price1":89,"price2":680.00},
+	"g4":{"src":"../images/index/today1_4.jpg","discount":6.0,"name":"SNP老虎助眠眼罩5枚，给眼部带来舒适的休息。","price1":59,"price2":99.00},
+	"g5":{"src":"../images/index/today1_5.jpg","discount":4.2,"name":"雅诗兰黛鲜活亮采晚霜15ml，水润充盈，新鲜满出来！","price1":79,"price2":186.00},
+	"g6":{"src":"../images/index/today1_6.jpg","discount":8.0,"name":"兰蔻全新水份缘舒缓日霜（均衡型）50ml，排浊净化，舒敏养肤！","price1":499,"price2":620.00}
+}

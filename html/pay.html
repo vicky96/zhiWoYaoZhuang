@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/pay.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<div id="header"></div>
+
+	<!-- logo、步骤 -->
+	<div class="header2">
+		<div class="logo">
+			<a href="index.html"><img src="../images/common/logo.jpg"></a>
+			<ul class="flow">
+				<li>
+					<span>1</span>
+					<i></i>
+					<p>我的购物车</p>
+				</li>
+				<li>
+					<i class="i1"></i>
+					<span>2</span>
+					<i class="i2"></i>
+					<p>确认订单信息</p>
+				</li>
+				<li>
+					<i></i>
+					<span>3</span>
+					<p>成功提交订单</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 主体 -->
+	<div class="main">
+		<!-- 收货地址 -->
+		<form>
+			<h1 class="pay-num"><span>1</span>收货地址</h1>
+			<ul>
+				<li>收件人姓名：
+					<span>*</span>
+					<input type="text">
+				</li>
+				<li>所在地区：
+					<span>*</span>
+					<select id="s_province" name="s_province"></select>
+					<select id="s_city" name="s_city" ></select>
+					<select id="s_county" name="s_county"></select>
+				    <script class="resources library" src="../lib/area.js" type="text/javascript"></script>
+				    <script type="text/javascript">_init_area();</script>
+				</li>
+				<li>详细地址：
+					<span>*</span>
+					<input type="text" placeholder="请填写详细地址">
+				</li>
+				<li>邮政编码：
+					<span>*</span>
+					<input type="text">
+				</li>
+				<li>手机号码：
+					<span>*</span>
+					<input type="text">或&nbsp&nbsp固定电话：<input type="text">
+				</li>
+				<li>邮箱：
+					<input type="text">
+				</li>
+				<li><button type="button">保存并使用</button></li>
+			</ul>
+		</form>
+
+		<!-- 商品清单 -->
+		<div class="list">
+			<h1 class="pay-num"><span>2</span>商品清单<a href="car.html"><<返回购物车</a></h1>
+			<ul class="title">
+				<li>选购的商品</li>
+				<li>单价</li>
+				<li>数量</li>
+				<li>金额小计</li>
+			</ul>
+			<div class="car-content">
+				<!-- <ul class="car-list">
+					<li class="goods">
+						<a class="pic" href="#"><img src="../images/common/load_wait.gif"></a>
+						<a class="word" href="#"><p>Sulwhasoo/雪花秀滋阴生人参精华人参面霜两件套中样</p></a>		
+					</li>
+					<li class="pri">￥<span>49</span></li>
+					<li class="num"></li>
+					<li class="sumpri"></li>
+				</ul> -->
+			</div>
+		</div>
+
+		<!-- 支付方式 -->
+		<div class="method">
+			<h1 class="pay-num"><span>3</span>支付方式</h1>
+			<ul class="plat">
+				<h2>支付平台</h2>
+				<li>
+					<i class="active"></i>
+					<span class="s1 active"></span>
+					<em class="active"></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s2"></span>
+					<em></em>
+				</li>
+				<h2>网银支付</h2>
+				<li>
+					<i></i>
+					<span  class="s3"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s4"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s5"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s6"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s7"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s8"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s9"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s10"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s11"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s12"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s13"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s14"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s15"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s16"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s17"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s18"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s19"></span>
+					<em></em>
+				</li>
+				<h2>信用卡支付（快捷支付）</h2>
+				<li>
+					<i></i>
+					<span  class="s20"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s21"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s22"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s23"></span>
+					<em></em>
+				</li>
+				<li>
+					<i></i>
+					<span  class="s24"></span>
+					<em></em>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 备注 -->
+		<div class="remark">
+			<h1 class="pay-num"><span>4</span>订单备注</h1>
+			<p>如您有特殊要求，请在此处留言，限140字以内</p>
+			<input type="text">
+			<span class="should">应付金额：<i>￥</i><em>124.00</em></span>
+			<button type="button">确定订单</button>
+		</div>
+	</div>
+
+	<!-- 尾部 -->
+	<div id="footer"></div>
+
+	<script src="../lib/jquery-1.12.3.js"></script>
+	<script src="../lib/template.js"></script>
+	<script src="../js/common/headerTpl.js"></script>
+	<script src="../js/common/footerTpl.js"></script>
+	<script>
+		var render1 = template.compile(tpl.header);
+		var headerHtml = render1({})
+		document.getElementById("header").innerHTML = headerHtml;
+
+		var render4 = template.compile(tpl.footer);
+		var footerHtml = render4({})
+		document.getElementById("footer").innerHTML = footerHtml;
+	</script>
+	<script src="../lib/jquery.cookie.js"></script>
+	<script src="../js/common/common.js"></script>
+	<script src="../js/pay.js"></script>
+	<script src="../lib/area.js"></script>
+</body>
+</html>
