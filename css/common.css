@@ -1,5 +1,6 @@
 body{
 	background: #f6f6f3;
+	min-width:1100px;/*窗口缩小后会变形，设置它就好了*/
 }
 /*头部*/
 header{
@@ -757,6 +758,10 @@ nav{
 	background: url("../images/common/sidebarico.png") no-repeat 0 -105px;
 }
 /*下部*/
+@media screen and (max-height: 550px){
+	.sidebar-two{display:none}
+}/*窗口缩小后会使侧边栏上下重叠，用媒体查询隐藏就好*/
+
 .sidebar-two{
 	position: absolute;
 	bottom: 20px;

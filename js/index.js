@@ -243,6 +243,17 @@ $(function(){
 		var goods = $.cookie("carts")?JSON.parse($.cookie("carts")):{};
 		if(goodSrc in goods){
 			goods[goodSrc].num++;
+			// 加入购物车的实际数量跟显示的不一样，需要将内容替换掉
+			var oLiNew = '<a class="selected-images" href="#"><img src="'+goods[goodSrc].src+'"></a>'+
+						'<a class="selected-font" href="#">'+goods[goodSrc].name+'</a>'+
+						'<div class="selected-info">'+
+							'<span class="selected-price">￥<i>'+goods[goodSrc].price+'</i></span>'+
+							'<div class="num">'+
+								'<i><span class="jian"></span><span id="num">'+goods[goodSrc].num+'</span><span class="jia"></span></i>'+
+							'</div>'+
+							'<span class="selected-delete">删除</span>'+
+						'</div>';
+			$("li[data-id='"+goods[goodSrc].name+"']").html(oLiNew)//根据属性找对象，通过data-id来找
 		}else{
 			goods[goodSrc] = {
 				src:goodSrc,
@@ -250,7 +261,7 @@ $(function(){
 				price:goodPrice,
 				num:1
 			}
-			var oLiNew = '<li>'+
+			var oLiNew = '<li data-id="'+goods[goodSrc].name+'">'+
 						'<a class="selected-images" href="#"><img src="'+goods[goodSrc].src+'"></a>'+
 						'<a class="selected-font" href="#">'+goods[goodSrc].name+'</a>'+
 						'<div class="selected-info">'+

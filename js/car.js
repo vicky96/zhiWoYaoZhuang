@@ -18,7 +18,7 @@ $(function(){
 								'<a class="word" href="#"><p>'+goods[goodSrc].name+'</p></a>'+		
 							'</li>'+
 							'<li class="pri">￥<span>'+goods[goodSrc].price+'</span></li>'+
-							'<li class="num"><i><span class="jian"></span><input type="text" id="num" value="'+goods[goodSrc].num+'"/><span class="jia"></span></i></li>'+
+							'<li class="num"><i><span class="jian"></span><input type="text" maxlength=4 id="num" value="'+goods[goodSrc].num+'"/><span class="jia"></span></i></li>'+
 							'<li class="sumpri"></li>'+
 							'<li class="jifen"></li>'+
 							'<li class="btn">'+
@@ -42,7 +42,7 @@ $(function(){
 			oNum2 = $(this).find(".num i #num"),
 			oJia = $(this).find(".num i .jia"),
 			oJian = $(this).find(".num i .jian"),
-			ji = oPri*oNum1,
+			ji = (oPri*oNum1).toFixed(2),
 			oSumpri = $(this).find(".sumpri"),
 			oJifen = $(this).find(".jifen"),
 			goodSrc = $(this).find(".goods").find(".pic").find("img").attr("src");
@@ -74,22 +74,23 @@ $(function(){
 		})
 		oNum2.keyup(function () {
 			this.value = this.value.replace(/[^\d]/g, '');
-
         })
         oNum2.blur(function(){
-        	if(!$(this).val()){
+        	if(this.value == 0){
+				$(this).val(1)
+			}else if(!$(this).val()){
         		oNum2.focus()
         	}else{
+        		var allSum0=allSum;
         		goods[goodSrc].num = $(this).val();
-        		ji = oPri*goods[goodSrc].num;
+        		ji = (oPri*goods[goodSrc].num).toFixed(2);
         		oSumpri.html(ji);
         		oJifen.html(ji);
-        		allSum += ji;
-				oMoney.find("i").html(allSum);
+        		allSum0 += Number(ji);
+				oMoney.find("i").html((allSum).toFixed(2));
         		$.cookie("carts",JSON.stringify(goods),7);
         	}
         })
-		
 	})
 	var oMoney = $(".money"),
 		aSum = oCarList.find(".sumpri"),
@@ -120,17 +121,28 @@ $(function(){
 			isAll=true;
 		}
 	})
-	var isSelect = true;//没选
+
+	// var isSelect = true;//没选
 	aGoodsSelect.click(function(){
-		if(isSelect){
-			$(this).addClass("active");
-			isSelect=false;
-		}else{
+		// oAllSelect.addClass('active');
+		
+		if($(this).hasClass('active')){//有class就移除，没有就添加
 			$(this).removeClass("active");
 			oAllSelect.removeClass("active");
-			isSelect=true;
+		}else{
+			$(this).addClass("active");
+		}
+		var num=0;
+		for(var i=0;i<aGoodsSelect.length;i++){
+			if(aGoodsSelect.eq(i).hasClass('active')){
+				num++;
+			}
+			if(num==aGoodsSelect.length){
+				oAllSelect.addClass('active')
+			}
 		}
 	})
+
 
 	// 删除已选
 	oSelectedDelete.click(function(){
@@ -142,6 +154,8 @@ $(function(){
 						var goodSrc = aGoodsSelect.eq(i).siblings('.goods').find(".pic").find("img").attr("src");
 						delete goods[goodSrc];
 						$.cookie("carts",JSON.stringify(goods),7);
+						oCarList = $(".car-list");//删除已选后需要再重置一下
+						aGoodsSelect = $(".goods-select",oCarList)
 						if(len<=1){
 							oCarPay.css("display","none");
 							oCarEmpty.css("display","block");	
@@ -167,6 +181,18 @@ $(function(){
 			var goodSrc = $(this).parent().siblings('.goods').find(".pic").find("img").attr("src");
 			delete goods[goodSrc];
 			$.cookie("carts",JSON.stringify(goods),7)
+			oCarList = $(".car-list");
+			aGoodsSelect = $(".goods-select",oCarList);//删除之后需要重置，并且判断是否为全选
+			console.log(aGoodsSelect)
+			var num=0;
+			for(var i=0;i<aGoodsSelect.length;i++){
+				if(aGoodsSelect.eq(i).hasClass('active')){
+					num++;
+				}
+				if(num==aGoodsSelect.length){
+					oAllSelect.addClass('active')
+				}
+			}
 			if(len<=1){
 				oCarPay.css("display","none");
 				oCarEmpty.css("display","block");	
@@ -191,7 +217,16 @@ $(function(){
 
 	// 结算时判断是否登录
 	var oPay = $(".pay-account");
-	oPay.click(function(){
+	oPay.click(function(event){
+		event.preventDefault()
+		// console.log(aGoodsSelect.hasClass('active'))
+		// 	if(aGoodsSelect.hasClass('active')){
+		// 		console.log(aGoodsSelect.eq(i).index())
+		// 		// $.cookie("pay",JSON.stringify(goods.eq(aGoodsSelect.index)),7)
+		// 	}
+		
+		
+		// $.cookie("pay",JSON.stringify(goods),7);
 		if($.cookie("tel")){
 			location.href = "pay.html";
 		}else{

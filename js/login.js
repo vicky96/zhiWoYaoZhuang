@@ -89,11 +89,6 @@ window.onkeyup = function(evt){
 function keyCheck(){
 	var value1 = userName.value,
 		auto = $("#auto");
-	if(auto.is(":checked")){
-		setCookie("tel",value1,{expires:7});
-	}else{
-		setCookie("tel",value1);
-	}
 	if(checkNum()){
 		ajax({
 			url:"../data/common/userLogin_get.php",
@@ -101,6 +96,11 @@ function keyCheck(){
 			success:function(data){
 				var result = JSON.parse(data);
 				if(result.status==0){
+					if(auto.is(":checked")){//cookie应该在验证成功后才存
+						setCookie("tel",value1,{expires:7});
+					}else{
+						setCookie("tel",value1);
+					}
 					if(location.hash=="#1"){
 						location.href="car.html"
 					}else{

@@ -1,3 +1,29 @@
+// 加载模板
+var render1 = template.compile(tpl.header);
+var headerHtml = render1({})
+$("#header").html(headerHtml);
+
+var render2 = template.compile(tpl.logo);
+var logoHtml = render2({})
+$("#logo").html(logoHtml);
+
+var render3 = template.compile(tpl.nav);
+var navHtml = render3({})
+$("#nav").html(navHtml);
+
+var render4 = template.compile(tpl.footer);
+var footerHtml = render4({})
+$("#footer").html(footerHtml);
+
+var render5 = template.compile(tpl.sideBar);
+var sideBarHtml = render5({})
+$("#sideBar").html(sideBarHtml);
+
+var render6 = template.compile(tpl.footSearch);
+var footSearchHtml = render6({})
+$("#foot_search").html(footSearchHtml);
+
+
 // 登录后头部显示用户名
 	var loginChange = $("#login_change"),
 		loginOut = loginChange.siblings().find("a"),
@@ -372,11 +398,10 @@ function goodsNum(){
 	}else{
 		var shopCarNum = 0;
 		for(var goodSrc in goods){
-			shopCarNum += goods[goodSrc].num;
+			shopCarNum += Number(goods[goodSrc].num);//传过来的本来是一个字符串，应该将它转换成数字再加
 		}
 		$("#fly_num").html(shopCarNum)
 	}
-
 }	
 	
 

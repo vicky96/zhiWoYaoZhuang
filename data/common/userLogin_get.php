@@ -18,8 +18,8 @@
 	// status 0 已经注册  1 没有注册
 	// result 2 给你结果  3 不给你结果
 	// $sql = "SELECT * FROM user";//获取所有用户
-	$sql = "SELECT * FROM user where username='".$username."'";//根据username获取用户
-	$sql = "SELECT * FROM user where pwd='".$pwd."'";
+	$sql = "SELECT * FROM user where username='".$username."' && pwd='".$pwd."'";//根据username获取用户
+	// $sql = "SELECT * FROM user where pwd='".$pwd."'";
 	$returnData=mysql_query($sql); 
 	  
 	while($result=mysql_fetch_assoc($returnData)){  

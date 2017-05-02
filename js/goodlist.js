@@ -146,6 +146,16 @@ $(function(){
 		var goods = $.cookie("carts")?JSON.parse($.cookie("carts")):{};
 		if(goodSrc in goods){
 			goods[goodSrc].num++;
+			var oLiNew = '<a class="selected-images" href="#"><img src="'+goods[goodSrc].src+'"></a>'+
+						'<a class="selected-font" href="#">'+goods[goodSrc].name+'</a>'+
+						'<div class="selected-info">'+
+							'<span class="selected-price">￥<i>'+goods[goodSrc].price+'</i></span>'+
+							'<div class="num">'+
+								'<i><span class="jian"></span><span id="num">'+goods[goodSrc].num+'</span><span class="jia"></span></i>'+
+							'</div>'+
+							'<span class="selected-delete">删除</span>'+
+						'</div>';
+			$("li[data-id='"+goods[goodSrc].name+"']").html(oLiNew)
 		}else{
 			goods[goodSrc] = {
 				src:goodSrc,
@@ -153,7 +163,7 @@ $(function(){
 				price:goodPrice,
 				num:1
 			}
-			var oLiNew ='<li>'+
+			var oLiNew ='<li data-id="'+goods[goodSrc].name+'">'+
 							'<a class="selected-images" href="#"><img src="'+goods[goodSrc].src+'"></a>'+
 							'<a class="selected-font" href="#">'+goods[goodSrc].name+'</a>'+
 							'<div class="selected-info">'+
